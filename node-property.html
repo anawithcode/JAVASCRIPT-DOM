@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Property</title>
+</head>
+<ul id="menu">
+    <li id=""fisrt>Fisrt</li>
+    <li id="second">Second</li>
+    <li id="third">third</li>
+</ul>
+<body>
+<script>
+    /*
+    Node Property
+    - Node memiliki banyak sekali property
+    - Property di Node banyak berisi informasi reference ke Node lainnya,
+    seperti ke node parent-nya, node children-nya, atau node sebelahnya
+    - https://developer.mozilla.org/en-US/docs/Web/API/Node#properties
+    */
+
+    const menu = document.getElementById("menu");
+    console.info(menu);
+    console.info(menu.children);
+    console.info(menu.childNodes);
+
+    const second = document.getElementById("second");
+    console.info(second.previousSibling);
+    console.info(second.nextSibling);
+    console.info(second.textContent);
+
+</script>
+</body>
+</html>
