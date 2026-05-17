@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element</title>
+</head>
+<body>
+<div id="content" class="content"></div>
+
+<script>
+/*
+    Membuat Element
+    - Sebelumnya kita hanya mengambil element menggunakan id,
+    artinya kita perlu buat dulu element-nya di HTML
+    - Kita juga bisa membuat object element baru, dan menambahkannya ke halaman web
+    - Kita bisa menggunakan method createElement(tag) pada Document
+    - https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement
+*/
+
+    const content = document.getElementById("content");
+
+    const title = document.createElement("h1");
+    title.textContent = "Ini Lagi Belajar DOM";
+    content.appendChild(title)
+
+    const description = document.createElement("p");
+    description.textContent = "Belajar butuh konsistensi dan kebahagian tanpa takut";
+    content.appendChild(description);
+</script>
+</body>
+</html>
