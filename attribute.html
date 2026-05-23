@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atrribute</title>
+</head>
+<body>
+    <img id="ig "src="https://www.programmerzamannow.com/img/pzn.png" alt="ig pfp">
+<script>
+/*
+Attr
+- Attr atau attribute merupakan representasi dari attribute sebuah element,
+  singkatnya berupa pasangan key-value, di mana key adalah nama attribute
+  dan value adalah nilai attribute
+- https://developer.mozilla.org/en-US/docs/Web/API/Attr
+*/
+
+    const logo = document.getElementById("ig");
+    // const src = logo.getAttributeNode("src");
+    const src = logo.getAttribute("src");
+    
+    console.info(src.name);
+    console.info(src.value);
+</script>
+</body>
+</html>
