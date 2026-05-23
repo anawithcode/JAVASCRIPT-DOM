@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universal Selector</title>
+</head>
+<body>
+<p>This Is Text</p>
+<script>
+/*
+Query Selector
+- Sebelumnya kita sudah menggunakan method querySelectorAll() pada Document,
+  sekarang kita akan bahas lebih lengkap tentang Query Selector
+- Query Selector merupakan method untuk menseleksi node sesuai dengan pola
+  yang kita ingin cari
+- Terdapat dua method untuk Query Selector:
+  - Document.querySelector(pola) digunakan menseleksi node pertama
+    yang sesuai dengan pola
+  - Document.querySelectorAll(pola) digunakan untuk menseleksi semua node
+    yang sesuai dengan pola
+*/
+
+/*
+Pola Query Selector
+- Pola untuk Query Selector adalah menggunakan CSS Selector
+- Penggunaan polanya mirip ketika kita membuat Selector di CSS
+- Jika belum tahu tentang CSS Selector,
+  disarankan untuk mempelajari ulang materi CSS
+- https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors
+*/
+
+/*
+Universal Selector
+- Universal Selector merupakan selector untuk menyeleksi semua element
+- Kita bisa menggunakan karakter *
+- https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors
+*/
+    const elements = document.querySelectorAll("*");
+    console.info(elements);
+</script>
+</body>
+</html>
