@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form HTML</title>
+</head>
+<body>
+<form name="commentForm">
+    <label for="comment">
+        Comment : <input id="comment" type="text" name="comment">
+    </label>
+    <br/>
+    <label for="from">
+        From : <input id="from" type="text" name="from">
+    </label>
+    <br>
+    <input type="submit" value="submit">
+    <label for="reset">
+        Reset : <input id="reset" type="submit" name="reset" value="reset">
+    </label>
+</form>
+<div id="commentList"></div>
+<script>
+    document.querySelector("form[name=commentForm]").onsubmit = function (event) {
+        event.preventDefault(); // agar tidak melakukan submit beneran (url berganti)
+
+        const commentList = document.getElementById("commentList");
+        const comment = document.getElementById("comment").value;
+        const from = document.getElementById("from").value;
+
+        const commentItem = document.createElement("p");
+        commentItem.textContent = `${comment} - ${from}`;
+        commentList.appendChild(commentItem);
+
+        const reset = document.querySelector("form[name=commentForm]").reset();
+    }
+
+/*
+HTML Form Element
+- Form adalah salah satu element yang memiliki banyak sekali fitur di luar dari Element DOM
+- Hal ini karena penggunaan Form memang lebih kompleks dibandingkan element HTML lainnya
+- Ada banyak sekali property, method, dan juga event yang terdapat pada HTML form element atau input element
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement
+- https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement
+*/
+
+</script>
+</body>
+</html>

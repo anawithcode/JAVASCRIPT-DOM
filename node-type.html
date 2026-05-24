@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Type</title>
+</head>
+<body>
+Shiva andriyana
+<!--Ini Komentar-->
+<h1>Ini Title</h1>
+<script>
+    const nodes = document.body.childNodes;
+    for (let node of nodes) {
+        console.info(`${node} : ${node.nodeType}`);
+    }
+
+/*
+Node Type
+- Saat kita menyeleksi Node menjadi NodeList,
+  kadang kita ingin tahu tipe Node tersebut
+- Apakah Element, TextElement, atau yang lainnya
+- Node memiliki property bernama nodeType,
+  dimana kita bisa melihat tipe dari node tersebut
+- https://developer.mozilla.org/en-US/docs/Web/API/Node/nodeType
+*/
+
+// +--------------------------------------------+-------+------------------------------------------------------+
+// | Constant                                   | Value | Description                                          |
+// +--------------------------------------------+-------+------------------------------------------------------+
+// | Node.ELEMENT_NODE                          |   1   | An Element node seperti <p> atau <div>.              |
+// | Node.ATTRIBUTE_NODE                        |   2   | Sebuah Attribute dari Element.                       |
+// | Node.TEXT_NODE                             |   3   | Teks di dalam sebuah Element atau Attr.              |
+// | Node.CDATA_SECTION_NODE                    |   4   | CDATASection, misalnya <![CDATA[[ … ]]]>.            |
+// | Node.PROCESSING_INSTRUCTION_NODE           |   7   | ProcessingInstruction pada dokumen XML,              |
+// |                                            |       | misalnya <?xml-stylesheet … ?>.                      |
+// | Node.COMMENT_NODE                          |   8   | Sebuah Comment node, misalnya <!-- … -->.            |
+// | Node.DOCUMENT_NODE                         |   9   | Sebuah Document node.                                |
+// | Node.DOCUMENT_TYPE_NODE                    |  10   | DocumentType node, misalnya <!DOCTYPE html>.         |
+// | Node.DOCUMENT_FRAGMENT_NODE                |  11   | Sebuah DocumentFragment node.                        |
+// +--------------------------------------------+-------+------------------------------------------------------+
+
+</script>   
+</body>
+</html>
